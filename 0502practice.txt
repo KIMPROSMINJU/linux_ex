@@ -1,0 +1,475 @@
+root@student06:~# nano /etc/passwd
+root@student06:~# nano /etc/passwd
+root@student06:~# nano /etc/shadow
+root@student06:~# nano /etc/passwd
+root@student06:~# nano /etc/group
+root@student06:~# adduser
+adduser: 하나 혹은 두 개의 이름만 지정할 수 있습니다.
+root@student06:~# adduser poly1
+'poly1' 사용자를 추가 중...
+새 그룹 'poly1' (1001) 추가 ...
+새 사용자 'poly1' (1001) 을(를) 그룹 'poly1' (으)로 추가 ...
+'/home/poly1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: minju
+	방 번호 []: 415
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: student06
+정보가 올바릅니까? [Y/n] y
+root@student06:~# poly1 passwd
+명령어 'poly1' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb polypolyml의 명령어 ' (5.7.1-4ubuntu1)'
+  deb polycpolyml의 명령어 ' (5.7.1-4ubuntu1)'
+Try: apt install <deb name>
+root@student06:~# nano /etc/passwd
+root@student06:~# adduser --uid 1111 poly2
+'poly2' 사용자를 추가 중...
+새 그룹 'poly2' (1111) 추가 ...
+새 사용자 'poly2' (1111) 을(를) 그룹 'poly2' (으)로 추가 ...
+'/home/poly2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech2
+	방 번호 []: 509
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student06:~# adduser --gid 1000 poly3
+'poly3' 사용자를 추가 중...
+새 사용자 'poly3' (1002) 을(를) 그룹 'student06' (으)로 추가 ...
+'/home/poly3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech3
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student06:~# tail /etc/passwd
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student06:x:1000:1000:student06,,,:/home/student06:/bin/bash
+poly1:x:1001:1001:minju,415,,,student06:/home/poly1:/bin/bash
+poly2:x:1111:1111:polytech2,509,,:/home/poly2:/bin/bash
+poly3:x:1002:1000:polytech3,,,:/home/poly3:/bin/bash
+root@student06:~# adduser --home /newhome  polytech4
+'polytech4' 사용자를 추가 중...
+새 그룹 'polytech4' (1002) 추가 ...
+새 사용자 'polytech4' (1003) 을(를) 그룹 'polytech4' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+polytech4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech4
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] n
+polytech4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 [polytech4]: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student06:~# userdel -r polytech4
+userdel: polytech4 mail spool (/var/mail/polytech4) not found
+root@student06:~# adduser --home /newhome  poly4
+'poly4' 사용자를 추가 중...
+새 그룹 'poly4' (1002) 추가 ...
+새 사용자 'poly4' (1003) 을(를) 그룹 'poly4' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech4
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student06:~# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student06:x:1000:1000:student06,,,:/home/student06:/bin/bash
+poly1:x:1001:1001:minju,415,,,student06:/home/poly1:/bin/bash
+poly2:x:1111:1111:polytech2,509,,:/home/poly2:/bin/bash
+poly3:x:1002:1000:polytech3,,,:/home/poly3:/bin/bash
+poly4:x:1003:1002:polytech4,,,:/newhome:/bin/bash
+root@student06:~# login
+student06 로그인: poly4
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly4@student06:~$ logout
+root@student06:~# adduser --shell /bin/csh poly5
+'poly5' 사용자를 추가 중...
+새 그룹 'poly5' (1003) 추가 ...
+새 사용자 'poly5' (1004) 을(를) 그룹 'poly5' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/csh'
+'/home/poly5' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly5의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech5
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@student06:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+student06:x:1000:1000:student06,,,:/home/student06:/bin/bash
+poly1:x:1001:1001:minju,415,,,student06:/home/poly1:/bin/bash
+poly2:x:1111:1111:polytech2,509,,:/home/poly2:/bin/bash
+poly3:x:1002:1000:polytech3,,,:/home/poly3:/bin/bash
+poly4:x:1003:1002:polytech4,,,:/newhome:/bin/bash
+poly5:x:1004:1003:polytech5,,,:/home/poly5:/bin/csh
+root@student06:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:student06
+student06:x:1000:
+sambashare:x:136:student06
+poly1:x:1001:
+poly2:x:1111:
+poly4:x:1002:
+poly5:x:1003:
+root@student06:~# passwd poly1
+새 암호: 
+잘못된 비밀번호: 암호가 앞뒤 어느쪽에서 읽어도 같은 문맥입니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@student06:~# login
+student06 로그인: poly1
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly1@student06:~$ logout
+root@student06:~# user mod
+명령어 'user' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb fuserpsmisc의 명령어 ' (23.4-2build3)'
+  deb uservuserv의 명령어 ' (1.2.1~beta4)'
+  deb iuseripmiutil의 명령어 ' (3.1.8-1)'
+  deb userscoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+Try: apt install <deb name>
+root@student06:~# usermod --shell /bin/csh poly1
+root@student06:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:student06
+student06:x:1000:
+sambashare:x:136:student06
+poly1:x:1001:
+poly2:x:1111:
+poly4:x:1002:
+poly5:x:1003:
+root@student06:~# usermod --groups student06 poly1
+root@student06:~# nano /etc/passwd
+root@student06:~# ls /home
+meow.txt  meowmeow.txt  poly1  poly2  poly3  poly5  student06
+root@student06:~# ls /
+bin    dev   lib    libx32      mnt      proc  sbin  swapfile  usr
+boot   etc   lib32  lost+found  newhome  root  snap  sys       var
+cdrom  home  lib64  media       opt      run   srv   tmp
+root@student06:~# history
+    1  nano /etc/gdm3/custom.conf
+    2  nano /etc/pam.d/gdm-password
+    3  nano /etc/pam.d/gdm-autologin
+    4  nano /root/.profile
+    5  cd /etc/apt
+    6  mv sources.list sources.list.bak
+    7  ls
+    8  wget http://download.hanbit.co.kr/ubuntu/18.04/sources.list
+    9  ls
+   10  apt-get update
+   11  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+   12  apt-get update
+   13  ufw enable
+   14  apt-get install net-tools -y
+   15  net stat-
+   16  netstat-
+   17  net-stat
+   18  netstat
+   19  halt
+   20  cd
+   21  clear
+   22  exit
+   23  cd
+   24  poweroff
+   25  cd
+   26  shutdown -P +1
+   27  cd
+   28  shutdown -P +10
+   29  shutdown -c
+   30  shutdown -r 10:00
+   31  shutdown -c
+   32  shutdown -k +1
+   33  clear
+   34  init 6
+   35  shutdown -r now
+   36  logout
+   37  exit
+   38  cd /lib/systemd/system reunlevel?.target
+   39  cd /lib/systemd/system
+   40  ls - l runlevel?.target
+   41  ls -l runlevel?.target
+   42  cd
+   43  ls -l /lib/systemd/system/default.target
+   44  ln -sf /lib/systemd/system/multi-user.target /lib/systemd/system/default.target
+   45  cd /lib/systemd/system
+   46  ls -l /lib/systemd/system/default.target
+   47  ls -l runlevel?.target
+   48  reboot
+   49  passwd
+   50  cd /lib/systemd/system/
+   51  ln -sf graphical.target default.target
+   52  reboot
+   53  nano
+   54  nano new.txt
+   55  cd
+   56  ls
+   57  cd /바탕화면
+   58  cd /바탕화면/
+   59  vi
+   60  ls -l
+   61  vi
+   62  ls -l
+   63  vi something.txt
+   64  ls -l
+   65  vi
+   66  ls -l
+   67  rm -rf something.txt
+   68  rm -rf something2.txt
+   69  ls -l
+   70  vi whatiwant.txt
+   71  clear
+   72  cd /media/root/Ubunyu 22.04.2 LTS amd64/
+   73  cd /media/root/Ubuntu 22.04.2 LTS amd64/
+   74  cd /media/root/
+   75  cd 
+   76  umount /dev/cdrom
+   77  cd /media/root/Ubuntu-Server\ 22.04.2\ LTS\ amd64/
+   78  pwd
+   79  ls
+   80  cd casper
+   81  ls -l
+   82  umiunt /dev/cdrom
+   83  umount /dev/cdrom
+   84  cd /media
+   85  umount /dev/cdrom
+   86  mount
+   87  vi
+   88  more /etc/systemd/system/.config
+   89  more /etc/systemd/system/.conf
+   90  more /etc/systemd/system.conf
+   91  less /etc/systemd/system.conf
+   92  more /etc/systemd/system.conf
+   93  more +10 /etc/systemd/system.conf
+   94  fil /etc/systemd/system.conf
+   95  file /etc/systemd/system.conf
+   96  clear
+   97  ifconfig
+   98  ifconfig lo
+   99  ip addr
+  100  ip route
+  101  resolvectl status
+  102  systemd-resolve --status ens32
+  103  nslookup
+  104  ping www.google.com
+  105  cat /etc/resolve.conf
+  106  cat /etc/resolv.conf
+  107  cat /etc/hosts
+  108  nm-connection-editor
+  109  history
+  110  resolvectl status
+  111  ls
+  112  cat whatiwant.txt
+  113  cd test
+  114  mmkdir test
+  115  mkdir test
+  116  cp whatiwant.txt test
+  117  cd test
+  118  ls
+  119  mv whatiwant.txt whatiwantt.txt
+  120  lw
+  121  l
+  122  ls
+  123  mv whatiwantt.txt whatiwant.txt
+  124  vi
+  125  ls
+  126  mv whatis whatis.txt
+  127  xz -k test
+  128  cd../
+  129  cd ../
+  130  cd test
+  131  xz -k whatis.txt whatiwant,txt
+  132  xz -k whatis.txt whatiwant.txt
+  133  ls
+  134  xz -d whatiwant.txt.xz
+  135  xz -d whatis.txt.xz
+  136  ls
+  137  clear
+  138  cd
+  139  ls /home
+  140  cd /home
+  141  ls
+  142  nano
+  143  ls
+  144  mv meow meow.txt
+  145  nano
+  146  ls
+  147  cd
+  148  find /home "*.txt"
+  149  find /home/*.txt
+  150  find /home "*.txt" -erec rm {}\;
+  151  find /home "*.txt" -exec rm {}\;
+  152  find test -name "*.txt"
+  153  find test -name "*.txt" -exec rm{} \;
+  154  find home -name "*.txt" -exec rm{} \;
+  155  find/ home -name "*.txt" -exec rm{} \;
+  156  ;
+  157  gnome-control-secter
+  158  gnome-control-center
+  159  nano /etc/passwd
+  160  nano /etc/shadow
+  161  nano /etc/passwd
+  162  nano /etc/group
+  163  adduser
+  164  adduser poly1
+  165  poly1 passwd
+  166  nano /etc/passwd
+  167  adduser --uid 1111 poly2
+  168  adduser --gid 1000 poly3
+  169  tail /etc/passwd
+  170  adduser --home /newhome  polytech4
+  171  userdel -r polytech4
+  172  adduser --home /newhome  poly4
+  173  tail /etc/passwd
+  174  login
+  175  adduser --shell /bin/csh poly5
+  176  tail /etc/passwd
+  177  tail /etc/group
+  178  passwd poly1
+  179  login
+  180  user mod
+  181  usermod --shell /bin/csh poly1
+  182  tail /etc/group
+  183  usermod --groups student06 poly1
+  184  nano /etc/passwd
+  185  ls /home
+  186  ls /
+  187  history
+root@student06:~# ls /
+bin    dev   lib    libx32      mnt      proc  sbin  swapfile  usr
+boot   etc   lib32  lost+found  newhome  root  snap  sys       var
+cdrom  home  lib64  media       opt      run   srv   tmp
+root@student06:~# ls /home
+meow.txt  meowmeow.txt  poly1  poly2  poly3  poly5  student06
+root@student06:~# userdel -r poly5
+userdel: poly5 mail spool (/var/mail/poly5) not found
+root@student06:~# ls /home
+meow.txt  meowmeow.txt  poly1  poly2  poly3  student06
+root@student06:~# nano /etc/passwd
+root@student06:~# 
