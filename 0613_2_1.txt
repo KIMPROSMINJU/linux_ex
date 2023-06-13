@@ -1,0 +1,19 @@
+root@student06:~/다운로드# cd 0522-main
+bash: cd: 0522-main: 그런 파일이나 디렉터리가 없습니다
+root@student06:~/다운로드# ls
+0522-main.zip
+root@student06:~/다운로드# cd 0522-main
+bash: cd: 0522-main: 그런 파일이나 디렉터리가 없습니다
+root@student06:~/다운로드# cd 0522-main.zip
+bash: cd: 0522-main.zip: 디렉터리가 아닙니다
+root@student06:~/다운로드# cd 0522-main
+root@student06:~/다운로드/0522-main# ls
+01.html  04.html  07.html    09.html       ex10_08.html  test01_01.html
+02.html  05.html  07_1.html  ex10_06.html  imgs          test02.html
+03.html  06.html  08.html    ex10_07.html  test01.html
+root@student06:~/다운로드/0522-main# mv 01.html /root
+root@student06:~/다운로드/0522-main# cd /root
+root@student06:~# ls
+01.html  testfolder  다운로드  바탕화면  사진  템플릿
+snap     공개        문서      비디오    음악
+root@student06:~# 
